@@ -1,0 +1,27 @@
+# Fichiers d'environnement virtuel
+.venv/
+venv/
+
+# Fichiers Python compilés
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Fichiers de logs ou temporaires
+*.log
+*.tmp
+
+# Fichiers Jupyter
+.ipynb_checkpoints/
+
+# Configuration IDE
+.vscode/
+.idea/
+*.swp
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Secrets potentiels
+.env
