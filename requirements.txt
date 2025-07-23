@@ -1,5 +1,9 @@
+build==1.2.2.post1
 flake8==7.3.0
+ft_package @ file:///home/eldoc/Documents/gitpy/ex09/dist/ft_package-0.0.1.tar.gz
 mccabe==0.7.0
+packaging==25.0
 pycodestyle==2.14.0
 pyflakes==3.4.0
+pyproject_hooks==1.2.0
 tqdm==4.67.1

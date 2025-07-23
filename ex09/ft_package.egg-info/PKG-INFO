@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: ft_package
+Version: 0.0.1
+Summary: A simple package for testing
+Home-page: https://github.com/El-cmd/Python-for-Data-science
+Author: vloth
+Author-email: vloth@student.42.fr
+License: MIT
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: summary
