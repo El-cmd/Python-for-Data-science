@@ -1,6 +1,12 @@
 # Fichiers d'environnement virtuel
 .venv/
 venv/
+../venv/
+../../venv/
+../../../venv/
+../../../../venv/
+../../../../../venv/
+
 
 # Fichiers Python compilés
 __pycache__/
