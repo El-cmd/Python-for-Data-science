@@ -1,4 +1,15 @@
-def give_bmi(height: list[int | float], weight: list[int | float]) -> list[int | float]:
+"""
+Module: give_bmi
+Contient deux fonctions :
+- give_bmi : calcule l'IMC à partir de listes de tailles et poids
+- apply_limit : compare les IMC à une limite donnée
+"""
+
+
+def give_bmi(
+    height: list[int | float],
+    weight: list[int | float]
+        ) -> list[int | float]:
     """
     Calcule l'IMC pour chaque paire (taille, poids).
 
@@ -25,6 +36,7 @@ def give_bmi(height: list[int | float], weight: list[int | float]) -> list[int |
         bmi.append(weight[i] / (height[i] ** 2))
     return bmi
 
+
 def apply_limit(bmi: list[int | float], limit: int) -> list[bool]:
     """
     Retourne True si l'IMC est au-dessus de limit, sinon False.
@@ -34,8 +46,8 @@ def apply_limit(bmi: list[int | float], limit: int) -> list[bool]:
     """
     if not isinstance(bmi, list):
         raise TypeError("bmi must be a list")
-    for bmi in bmi:
-        if not isinstance(bmi, (int, float)):
+    for val in bmi:
+        if not isinstance(val, (int, float)):
             raise TypeError("all elements in bmi_list must be int or float")
     if not isinstance(limit, (int, float)):
         raise TypeError("limit must be an int or float")
