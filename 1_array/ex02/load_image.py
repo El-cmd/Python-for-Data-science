@@ -4,6 +4,19 @@ import os
 
 
 def ft_load(path: str) -> np.ndarray:
+    """
+    Charge une image depuis `path` et retourne un tableau NumPy.
+
+    Args:
+        path (str): Chemin du fichier image.
+
+    Returns:
+        np.ndarray: Tableau représentant l'image.
+
+    Raises:
+        FileNotFoundError: Si l'image n'existe pas.
+        ValueError: Si l'image ne peut pas être ouverte.
+    """
     if not isinstance(path, str):
         raise TypeError("Path must be a string")
     if not path.endswith(".jpg") and not path.endswith(".jpeg"):
