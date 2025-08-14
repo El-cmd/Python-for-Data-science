@@ -25,5 +25,4 @@ def ft_load(path: str) -> np.ndarray:
         raise FileNotFoundError("File not found")
     img = Image.open(path)  # ouvre l'image
     array = np.array(img)
-    #print(f"The shape of image is: {array.shape}")
     return array
