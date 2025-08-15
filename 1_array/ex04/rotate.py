@@ -13,10 +13,14 @@ def main():
         print(f"The shape of image is: {gray.shape} or ({gray.shape[0]},{gray.shape[1]})") # noqa
         print(gray)
         gray_2d = gray.squeeze()
-        rotated = np.transpose(gray_2d)
-        print(f"New shape after Transpose: ({rotated.shape[0]},{rotated.shape[1]})") # noqa
-        print(rotated)
-        plt.imshow(rotated, cmap="gray")
+        h, w = gray_2d.shape[0], gray_2d.shape[1]
+        transposed = np.zeros((w, h) + gray_2d.shape[2:], dtype=gray_2d.dtype)
+        for i in range(h):
+            for j in range(w):
+                transposed[j][i] = gray_2d[i][j]
+        print(f"New shape after Transpose: ({transposed.shape[0]},{transposed.shape[1]})") # noqa
+        print(transposed)
+        plt.imshow(transposed, cmap="gray")
         plt.show()
     except (TypeError, ValueError, FileNotFoundError) as e:
         print(f"Erreur : {e}")
