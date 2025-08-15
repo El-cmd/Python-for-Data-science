@@ -1,6 +1,7 @@
 from array2D import slice_me
 
-if __name__ == "__main__":
+
+def main():
     try:
         family = [[1.80, 78.4],
                   [2.15, 102.7],
@@ -10,3 +11,7 @@ if __name__ == "__main__":
         print(slice_me(family, 1, -2))
     except (TypeError, ValueError) as e:
         print(f"Erreur : {e}")
+
+
+if __name__ == "__main__":
+    main()

@@ -1,41 +1,46 @@
 import numpy as np
 
+
 def ft_invert(array: np.ndarray) -> np.ndarray:
     """
     Inverse les couleurs de l'image.
     """
     inverted = array.copy()
-    inverted[:, :, 0] = 255 - inverted[:, :, 0] #  0 = canal rouge
-    inverted[:, :, 1] = 255 - inverted[:, :, 1] #  1 = canal vert
-    inverted[:, :, 2] = 255 - inverted[:, :, 2] #  2 = canal bleu
+    inverted[:, :, 0] = 255 - inverted[:, :, 0]  # 0 = canal rouge
+    inverted[:, :, 1] = 255 - inverted[:, :, 1]  # 1 = canal vert
+    inverted[:, :, 2] = 255 - inverted[:, :, 2]  # 2 = canal bleu
     return inverted
+
 
 def ft_red(array: np.ndarray) -> np.ndarray:
     """
     Retire les couleurs vertes et bleues de l'image.
     """
     red = array.copy()
-    red[:, :, 1] = 0 #  1 = canal vert
-    red[:, :, 2] = 0 #  2 = canal bleu
+    red[:, :, 1] = 0  # 1 = canal vert
+    red[:, :, 2] = 0  # 2 = canal bleu
     return red
+
 
 def ft_green(array: np.ndarray) -> np.ndarray:
     """
     Retire les couleurs rouges et bleues de l'image.
     """
     green = array.copy()
-    green[:, :, 0] = 0 #  0 = canal rouge
-    green[:, :, 2] = 0 #  2 = canal bleu
+    green[:, :, 0] = 0  # 0 = canal rouge
+    green[:, :, 2] = 0  # 2 = canal bleu
     return green
+
 
 def ft_blue(array: np.ndarray) -> np.ndarray:
     """
     Retire les couleurs rouges et vertes de l'image.
     """
     blue = array.copy()
-    blue[:, :, 0] = 0 #  0 = canal rouge
-    blue[:, :, 1] = 0 #  1 = canal vert
+    blue[:, :, 0] = 0  # 0 = canal rouge
+    blue[:, :, 1] = 0  # 1 = canal vert
     return blue
+
 
 def ft_grey(array: np.ndarray) -> np.ndarray:
     """
@@ -43,6 +48,6 @@ def ft_grey(array: np.ndarray) -> np.ndarray:
     """
     grey = array.copy()
     grey[:, :, 0] = np.mean(grey[:, :, :3], axis=2, keepdims=True)
-    grey[:, :, 1] = grey[:, :, 0] #  1 = canal vert
-    grey[:, :, 2] = grey[:, :, 0] #  2 = canal bleu
+    grey[:, :, 1] = grey[:, :, 0]  # 1 = canal vert
+    grey[:, :, 2] = grey[:, :, 0]  # 2 = canal bleu
     return grey
