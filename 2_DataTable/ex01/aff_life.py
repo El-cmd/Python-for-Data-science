@@ -1,8 +1,12 @@
-import pandas as pd
 from load_csv import load
 import matplotlib.pyplot as plt
 
+
 def main():
+    """
+    Charge un fichier CSV et affiche la projection de la
+    longévité de la France dans un graph.
+    """
     try:
         df = load("life_expectancy_years.csv")
         france_row = df[df['country'] == 'France'].iloc[0]
@@ -16,6 +20,7 @@ def main():
         plt.close()
     except Exception:
         return
+
 
 if __name__ == "__main__":
     main()
