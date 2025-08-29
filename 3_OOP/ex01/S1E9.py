@@ -16,6 +16,7 @@ class Character(ABC):
 
 class Stark(Character):
     """Class héritée de Character"""
+
     def __init__(self, name, is_alive=True):
         """Initialise le nom et l'etat de vie de la classe héritée"""
         super().__init__(name, is_alive)
